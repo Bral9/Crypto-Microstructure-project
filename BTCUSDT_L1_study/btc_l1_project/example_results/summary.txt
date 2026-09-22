@@ -1,0 +1,28 @@
+SYNTHETIC DEMO: these scores are NOT market research findings.
+
+Regression (test)
+       model  mae_ticks        r2
+   zero_move   3.103742 -0.000064
+    raw_edge   3.049911  0.055458
+    ols_edge   3.037438  0.060078
+ols_expanded   3.037000  0.059671
+
+Classification (test)
+       model  accuracy  macro_f1  directional_fraction
+    majority  0.467951  0.212519              0.000000
+   zero_move  0.467951  0.212519              0.000000
+    raw_edge  0.467951  0.212519              0.000000
+    ols_edge  0.467951  0.212519              0.000000
+ols_expanded  0.467951  0.212519              0.000000
+  classifier  0.473509  0.403517              0.361615
+  calibrated  0.471286  0.318911              0.153020
+
+Probabilities (test)
+      model  log_loss  brier_multiclass
+class_prior  1.108428          0.674924
+ classifier  1.036766          0.622995
+ calibrated  1.020590          0.615623
+
+OLS edge parameters: {'intercept': -0.004849986905200747, 'beta': 0.7950803638418831}
+
+Read INTERPRETATION.md before drawing conclusions. No profitability or causal claims.

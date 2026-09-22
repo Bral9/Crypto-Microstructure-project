@@ -1,0 +1,86 @@
+{
+  "synthetic_demo": true,
+  "input": "btc_l1_project/example_results/synthetic_quotes.csv",
+  "sha256": "029364a153ade89c2c1ba6b74047e3af43f3b3ee157f02a3449dafb095e4d46a",
+  "config": {
+    "tick_size": 0.1,
+    "max_age_seconds": 2.0,
+    "volatility_window": 60,
+    "horizon_seconds": 1,
+    "threshold": "current half spread",
+    "features": [
+      "edge",
+      "spread",
+      "volatility",
+      "depth"
+    ]
+  },
+  "data_quality": {
+    "input_rows": 17991,
+    "bad_timestamps": 0,
+    "exact_duplicates": 1,
+    "invalid_books": 1,
+    "grid_rows": 18000,
+    "stale_seconds": 8,
+    "unavailable_seconds": 9
+  },
+  "splits": {
+    "train": {
+      "rows": 12408,
+      "start": "2026-01-01 00:01:00+00:00",
+      "end": "2026-01-01 03:29:58+00:00",
+      "classes": {
+        "0": 7713,
+        "-1": 2398,
+        "1": 2297
+      }
+    },
+    "calibration": {
+      "rows": 2699,
+      "start": "2026-01-01 03:30:00+00:00",
+      "end": "2026-01-01 04:14:58+00:00",
+      "classes": {
+        "0": 1253,
+        "-1": 724,
+        "1": 722
+      }
+    },
+    "test": {
+      "rows": 2699,
+      "start": "2026-01-01 04:15:00+00:00",
+      "end": "2026-01-01 04:59:58+00:00",
+      "classes": {
+        "0": 1263,
+        "-1": 720,
+        "1": 716
+      }
+    }
+  },
+  "regime_cutoffs_train_only": {
+    "volatility": [
+      3.944362002651258e-06,
+      4.524239979879746e-06
+    ],
+    "spread": [
+      0.20000000000436557,
+      0.5999999999985448
+    ],
+    "depth": [
+      5.937477120226658,
+      9.152409610688412
+    ]
+  },
+  "ols_edge": {
+    "intercept": -0.004849986905200747,
+    "beta": 0.7950803638418831
+  },
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "pyarrow": "23.0.1",
+    "joblib": "1.5.3"
+  }
+}
